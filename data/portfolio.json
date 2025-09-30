@@ -1,0 +1,87 @@
+portfolio_json = {
+  "company": {
+    "name": "Vantagemore Designs",
+    "mission": "To create thoughtfully designed spaces that align with our client’s visions, providing comfort, functionality, and confidence through innovative and personalized interior design solutions.",
+    "vision": " To grow Vantagemore Designs into a leading interior design company that transforms spaces and contributes to the prosperity of communities by fostering creativity and empowering the next generation of designers."
+  },
+  "about": "We are an interior design company with a passion for creating spaces that align with our clients’ visions while enhancing comfort and confidence. We specialize in space planning, material selection, and bringing creative concepts to life through visualization.",
+  "services": [
+    {"title":"Space Planning","description":"Optimize layouts for flow and functionality."},
+    {"title":"Furniture Design & Selection","description":"Custom design and sourcing aligned to style and comfort."},
+    {"title":"Interior Styling","description":"Décor, art, and accessories that elevate the space."},
+    {"title":"Office Design","description":"Balanced branding, functionality, and employee well-being."},
+    {"title":"Residential Design","description":"Personalized home environments reflecting your lifestyle."},
+    {"title":"Project Management","description":"From concept to completion—on time and on budget."},
+    {"title":"Consultation","description":"Expert advice to refresh spaces and guide decisions."}
+  ],
+  "projects": [
+    {
+      "slug": "law-office-elegance",
+      "type": "Office Space",
+      "title": "Elegance & Privacy for a Law Firm",
+      "summary": "Minimal mahogany accents, high ceilings, and expansive glass walls create an inviting yet discreet environment for high-profile clients.",
+      "details": "Large glass doors enhance the space’s grandeur while maintaining a contemporary feel aligned with discreet elegance.",
+      "cover": "assets/projects/law-office/cover.jpg",
+      "phases": [
+        {"label":"Before","images":["assets/projects/law-office/before-1.jpg"]},
+        {"label":"Mood Board","images":["assets/projects/law-office/moodboard.jpg"]},
+        {"label":"Plans & Sections","images":["assets/projects/law-office/plans-elevations.jpg"]},
+        {"label":"3D Renders","images":["assets/projects/law-office/render-1.jpg","assets/projects/law-office/render-2.jpg"]},
+        {"label":"Model","images":["assets/projects/law-office/model.jpg"]},
+        {"label":"Result","images":["assets/projects/law-office/result-1.jpg"]}
+      ]
+    },
+    {
+      "slug": "bungalow-space-planning",
+      "type": "Residential Space Planning",
+      "title": "Bungalow Space Planning",
+      "summary": "Optimized spatial organization to balance form and function for a harmonious living environment.",
+      "cover": "assets/projects/bungalow/cover.jpg",
+      "phases": [
+        {"label":"Concept","images":["assets/projects/bungalow/concept.jpg"]},
+        {"label":"Layout","images":["assets/projects/bungalow/layout.jpg"]}
+      ]
+    },
+    {
+      "slug": "furniture-design-suite",
+      "type": "Furniture Design",
+      "title": "Custom Furniture Series",
+      "summary": "Mobile clothing rack, reception desk flush with wall, and an executive desk blending luxury with practicality.",
+      "cover": "assets/projects/furniture/cover.jpg",
+      "images": [
+        {"src":"assets/projects/furniture/clothing-rack.jpg","alt":"Steel & wood clothing rack on casters"},
+        {"src":"assets/projects/furniture/reception-desk.jpg","alt":"Reception desk flush with wall"},
+        {"src":"assets/projects/furniture/executive-desk.jpg","alt":"Executive desk render and final"}
+      ]
+    },
+    {
+      "slug": "residential-renovation",
+      "type": "Residential Renovation",
+      "title": "Four-Bedroom Home Refresh",
+      "summary": "Scope included new flooring, plumbing and electrical updates, custom joinery, ceiling design, TV wall unit, paint, varnish, and sliding doors/windows.",
+      "details": "Kitchen cabinets, bespoke wardrobes and a shoe rack were part of the joinery package; wooden ceiling and stairs were varnished.",
+      "cover": "assets/projects/renovation/after-living.jpg",
+      "phases": [
+        {"label":"Before","images":["assets/projects/renovation/before-1.jpg"]},
+        {"label":"After — Living Room","images":["assets/projects/renovation/after-living.jpg"]},
+        {"label":"After — Kitchen","images":["assets/projects/renovation/after-kitchen.jpg"]},
+        {"label":"After — Bedrooms & Baths","images":["assets/projects/renovation/after-bed-bath.jpg"]}
+      ]
+    }
+  ],
+  "clients": [
+    "Mtickets Westlands",
+    "Gamma Advocates",
+    "Kitengela Residence",
+    "Marula Residential Renovation",
+    "Bomas Residential Renovation"
+  ],
+  "contact": {
+    "name": "Tiffany Wanjugu",
+    "phone": "0715203308",
+    "email": "Vantagemoredesigns@outlook.com",
+    "instagram_url": "https://instagram.com/thevantagemoretouch",
+    "tiktok_url": "https://www.tiktok.com/@thevantagemoretouch"
+  },
+  "download_pdf": "assets/Vantagemore-Portfolio.pdf"
+}
