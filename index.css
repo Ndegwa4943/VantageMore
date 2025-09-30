@@ -1,4 +1,4 @@
-       :root {
+        :root {
             --color-copper: #B87333;
             --color-teal: #3A5E5E;
             --color-offwhite: #F5F5F5;
@@ -117,7 +117,7 @@
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-bottom: 30px;
             max-width: 600px;
             margin-left: auto;
@@ -527,9 +527,83 @@
                 margin-bottom: 30px;
             }
         }
-/* === Vantagemore additions (safe to append) === */
-:root{--brand:#1d1d1f;--accent:#c6a26a;--muted:#666;--bg:#fff}
-section h2{margin:.2rem 0 1rem}
-input,textarea{border:1px solid #ddd;border-radius:10px;padding:10px;background:#fff}
-button,input,textarea{font:inherit}
-/* === end additions === */
+
+        
+
+    /* Style Guidance Section */
+    .style-guidance {
+        padding: 80px 0;
+        background-color: var(--color-white);
+    }
+    
+    .style-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .style-intro {
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+        color: var(--color-teal);
+        font-style: italic;
+    }
+    
+    .style-approaches {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .approach-card {
+        padding: 30px;
+        background: var(--color-offwhite);
+        border-radius: 0;
+        transition: var(--transition);
+    }
+    
+    .approach-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .approach-icon {
+        font-size: 40px;
+        color: var(--color-copper);
+        margin-bottom: 20px;
+    }
+    
+    .approach-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: var(--color-teal);
+    }
+    
+    .approach-card p {
+        color: var(--color-charcoal);
+        line-height: 1.6;
+    }
+    
+    .style-cta {
+        padding: 30px;
+        background: var(--color-teal);
+        color: var(--color-white);
+        border-radius: 0;
+    }
+    
+    .no-judgment {
+        font-size: 1.1rem;
+        margin: 0;
+        font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+        .style-approaches {
+            grid-template-columns: 1fr;
+        }
+        
+        .approach-card {
+            padding: 20px;
+        }
+    }
