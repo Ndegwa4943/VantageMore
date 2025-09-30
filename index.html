@@ -1,287 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vantagemore Designs | Interior Design Studio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <meta name="description" content="Vantagemore Designs is an interior design studio 
-        <br> that creates thoughtfully designed spaces that align with our client's visions, providing comfort, functionality, and confidence.">
-    <meta name="keywords" content="Interior Design, Furniture Design, Home Decor, Space Planning, Custom Furniture, Styling, Sourcing, Nairobi Interior Designer">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vantagemore Designs — Interior Design</title>
+  <meta name="description" content="Vantagemore Designs creates thoughtfully designed spaces for offices and homes: space planning, furniture design, styling, and project management." />
+  <link rel="preload" href="index.css" as="style" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    :root{--brand:#1d1d1f;--accent:#c6a26a;--muted:#666;--bg:#fff;}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',sans-serif;background:var(--bg);color:var(--brand);}
+    a{color:var(--brand);text-decoration:none}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(6px);background:rgba(255,255,255,.8);border-bottom:1px solid #eee;z-index:20}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{font-weight:800;letter-spacing:.5px}
+    .nav a{margin-left:16px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:56px 0}
+    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0}
+    .hero p{color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #eee;border-radius:999px;padding:8px 12px;font-size:12px;color:#444}
+    .btn{display:inline-block;border-radius:999px;padding:12px 18px;border:1px solid var(--brand);}
+    .btn.accent{background:var(--accent);border-color:var(--accent);color:#1b1206}
+    section{padding:56px 0}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .card{border:1px solid #eee;border-radius:14px;overflow:hidden;background:#fff;transition:transform .2s ease,box-shadow .2s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.06)}
+    .card img{width:100%;height:220px;object-fit:cover;background:#f6f6f6}
+    .card .pad{padding:14px}
+    .muted{color:var(--muted)}
+    .kicker{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#8c8c8c;margin-bottom:6px}
+    .services{grid-template-columns:repeat(2,1fr)}
+    .service{display:flex;gap:12px;padding:12px;border:1px dashed #eee;border-radius:12px}
+    .service b{display:block}
+    .clients{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{border:1px solid #eee;border-radius:999px;padding:8px 12px}
+    footer{padding:32px 0;border-top:1px solid #eee;color:#666}
+    dialog::backdrop{background:rgba(0,0,0,.4)}
+    dialog{max-width:min(980px,90vw);border:none;border-radius:16px;padding:0;overflow:hidden}
+    .modal-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;padding:12px 16px}
+    .modal-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .modal-body img{width:100%;height:100%;object-fit:cover}
+    .modal-copy{padding:18px}
+    .badge{display:inline-block;background:#f5efe5;color:#5b4521;padding:6px 10px;border-radius:999px;font-size:12px}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}.services{grid-template-columns:1fr}.modal-body{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">VANTAGE<span>MORE</span> DESIGNS</a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+  <header>
+    <div class="container nav">
+      <div class="logo">Vantagemore</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Portfolio</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
+  <main class="container">
     <section class="hero">
-        <div class="container hero-content">
-            <h1>Elevating Spaces with Purposeful Design</h1>
-            <p>Thoughtfully crafted interiors that reflect your vision while enhancing comfort, functionality, and confidence in your space.</p>
-            <a href="#contact" class="btn">Begin Your Transformation</a>
+      <div>
+        <div class="pill">Interior Design · Nairobi</div>
+        <h1>Thoughtfully designed spaces that align with your vision.</h1>
+        <p class="muted" id="missionVision">Loading…</p>
+        <div style="display:flex;gap:12px;margin-top:10px">
+          <a class="btn accent" href="#work">View Portfolio</a>
+          <a class="btn" href="#contact">Book a Consultation</a>
         </div>
+      </div>
+      <img src="assets/hero-placeholder.jpg" alt="Elegant modern interior by Vantagemore" style="width:100%;border-radius:16px;"/>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-couch"></i>
-                    </div>
-                    <h3>Interior Design</h3>
-                    <p>Personalized interior to elevate your style in your home and work spaces.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chair"></i>
-                    </div>
-                    <h3>Furniture Design</h3>
-                    <p>Custom-designed furniture pieces that blend with your style.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Sourcing</h3>
-                    <p>Finding unique furnishings and decor to complete your space.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-roller"></i>
-                    </div>
-                    <h3>Styling</h3>
-                    <p>Curating and arranging decor to create a cohesive look.</p>
-                </div>
-            </div>
-        </div>
+    <section id="about">
+      <div class="kicker">About</div>
+      <h2>Vantagemore Designs</h2>
+      <p class="muted" id="aboutCopy">Loading…</p>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Design Process</h2>
-            </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Initial Consultation</h3>
-                    <p>We discuss your needs, style, and budget</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Site Visit & Measurements</h3>
-                    <p>We assess the space and take measurements</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Concept Development</h3>
-                    <p>We create mood boards and initial ideas</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Design Presentation</h3>
-                    <p>We present detailed plans and visuals</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3>Feedback & Revisions</h3>
-                    <p>We refine the design based on your input</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">6</div>
-                    <h3>Final Design & Costing</h3>
-                    <p>We provide finalized plans and pricing</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">7</div>
-                    <h3>Implementation</h3>
-                    <p>We oversee the execution and coordination</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">8</div>
-                    <h3>Final Styling & Handover</h3>
-                    <p>We add finishing touches and finalize</p>
-                </div>
-            </div>
-        </div>
+    <section id="services">
+      <div class="kicker">Services</div>
+      <h2>What we do</h2>
+      <div class="grid services" id="servicesList"></div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Office Design" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Gamma Advocates Office</h3>
-                        <p>Elegance and privacy for high-profile law firm clients</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Residential Design" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Bangalow Design</h3>
-                        <p>Space planning for harmonious living environment</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Furniture Design" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Custom Clothing Rack</h3>
-                        <p>Maximizing storage with a clean, minimalist look</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="work">
+      <div class="kicker">Portfolio</div>
+      <h2>Selected projects</h2>
+      <div class="grid cols-3" id="projects"></div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-item">
-                    <p class="testimonial-text">"Tiffany transformed our awkward layout into a functional masterpiece! Her attention to detail and ability to understand our needs made the entire process seamless."</p>
-                    <p class="testimonial-author">- Marula Residence Client</p>
-                </div>
-            </div>
-        </div>
+    <section id="clients">
+      <div class="kicker">Clients</div>
+      <h2>Trusted by</h2>
+      <div class="clients" id="clientList"></div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Let's Start Your Project</h3>
-                    <p>We're excited to hear about your interior design needs and help create a space that reflects your personality and lifestyle.</p>
-                    <div class="contact-details">
-                        <p><i class="fas fa-phone"></i> 0715203308</p>
-                        <p><i class="fas fa-envelope"></i> vantagemoredesigns@outlook.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Karen, Nairobi</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact">
-                        <p class="hidden">
-                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                        </p>
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
+    <section id="contact">
+      <div class="kicker">Contact</div>
+      <h2>Let’s transform your space</h2>
+      <div class="grid" style="grid-template-columns:1.1fr .9fr">
+        <div>
+          <p id="contactInfo" class="muted">Loading…</p>
+          <p class="muted">Prefer WhatsApp? Tap the phone number above.</p>
+          <a id="downloadPortfolio" class="btn" href="assets/Vantagemore-Portfolio.pdf" download>Download full portfolio (PDF)</a>
         </div>
+        <form action="https://formspree.io/f/xyyrzbkg" method="POST" class="card pad">
+          <label>Name<br><input name="name" required style="width:100%"></label><br><br>
+          <label>Email<br><input name="email" type="email" required style="width:100%"></label><br><br>
+          <label>Project brief<br><textarea name="message" rows="5" placeholder="Tell us about your space…" style="width:100%"></textarea></label><br><br>
+          <button class="btn accent" type="submit">Send inquiry</button>
+        </form>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>VANTAGEMORE DESIGNS</h3>
-                <p>Creating thoughtfully designed spaces that align with our client's visions, providing comfort, functionality, and confidence.</p>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Vantagemore Designs. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <small>© <span id="year"></span> Vantagemore Designs</small>
+      <div>
+        <a id="ig" class="chip" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a id="tt" class="chip" href="#" target="_blank" rel="noopener">TikTok</a>
+        <a class="chip" href="mailto:Vantagemoredesigns@outlook.com">Email</a>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Form submission handling
-        const contactForm = document.querySelector('.contact-form form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                // You can add form validation here if needed
-                // Netlify will handle the form submission
-            });
-        }
-    </script>
+  <dialog id="projectModal">
+    <div class="modal-head">
+      <div>
+        <div class="kicker" id="modalType">Project</div>
+        <strong id="modalTitle"></strong>
+      </div>
+      <form method="dialog"><button class="chip">Close</button></form>
+    </div>
+    <div class="modal-body">
+      <img id="modalImage" alt="Project image" />
+      <div class="modal-copy">
+        <p class="badge" id="modalPhase">Phase</p>
+        <p id="modalText" class="muted"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
