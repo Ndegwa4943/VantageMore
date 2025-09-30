@@ -527,3 +527,9 @@
                 margin-bottom: 30px;
             }
         }
+/* === Vantagemore additions (safe to append) === */
+:root{--brand:#1d1d1f;--accent:#c6a26a;--muted:#666;--bg:#fff}
+section h2{margin:.2rem 0 1rem}
+input,textarea{border:1px solid #ddd;border-radius:10px;padding:10px;background:#fff}
+button,input,textarea{font:inherit}
+/* === end additions === */
