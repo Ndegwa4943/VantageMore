@@ -1,0 +1,848 @@
+<!-- ========================= -->
+<!-- nJERuIne Gold v2 -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>nJERuIne Gold — A CUT ABOVE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --green:#0B6623;
+  --green-dark:#08471a;
+  --red:#FF3B3F;
+  --bronze:#B37D28;
+  --white:#f5f5f5;
+  --muted:#c7d0c7;
+
+  --glass:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.12);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--green);
+  color:var(--white);
+  font-family:'Space Grotesk', sans-serif;
+  overflow-x:hidden;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.45);
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.65)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:min(900px, 90%);
+}
+
+.kicker{
+  color:var(--red);
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  font-size:0.9rem;
+}
+
+.hero h1{
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  line-height:0.9;
+  font-size:clamp(4rem, 11vw, 9rem);
+}
+
+.hero h1 span{
+  color:var(--bronze);
+}
+
+.hero-sub{
+  margin:30px auto;
+  max-width:650px;
+  color:var(--muted);
+  line-height:1.8;
+  font-size:1.05rem;
+}
+
+.hero-sub strong{
+  color:white;
+}
+
+.hero-btn{
+  margin-top:10px;
+  border:none;
+  background:var(--red);
+  color:white;
+  padding:18px 34px;
+  border-radius:100px;
+  font-weight:700;
+  letter-spacing:2px;
+  cursor:pointer;
+  transition:0.3s ease;
+  box-shadow:0 0 30px rgba(255,59,63,0.35);
+}
+
+.hero-btn:hover{
+  transform:translateY(-4px);
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:999;
+  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,0.15);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+
+  opacity:0;
+  transform:translateY(-20px);
+
+  animation:fadeNav 1s ease forwards;
+  animation-delay:2.5s;
+}
+
+@keyframes fadeNav{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.logo{
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.logo span{
+  color:var(--bronze);
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:0.95rem;
+  opacity:0.8;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  opacity:1;
+  color:var(--red);
+}
+
+/* ========================= */
+/* GENERAL */
+/* ========================= */
+
+section{
+  padding:120px 8%;
+}
+
+.section-kicker{
+  color:var(--red);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin-bottom:14px;
+  font-size:0.85rem;
+}
+
+.section-title{
+  font-size:clamp(2.4rem, 5vw, 4rem);
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  color:var(--bronze);
+  margin-bottom:20px;
+}
+
+.section-sub{
+  max-width:700px;
+  color:var(--muted);
+  line-height:1.8;
+  margin-bottom:60px;
+}
+
+/* ========================= */
+/* GLASS */
+/* ========================= */
+
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(16px);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:35px;
+}
+
+/* ========================= */
+/* STRAIN LAB */
+/* ========================= */
+
+.lab-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.lab-card{
+  transition:0.3s ease;
+}
+
+.lab-card:hover{
+  transform:translateY(-6px);
+}
+
+.lab-label{
+  color:var(--red);
+  font-size:0.8rem;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.lab-card h3{
+  margin-bottom:18px;
+  font-size:1.5rem;
+}
+
+.lab-card p{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.strain-day{
+  margin-top:50px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.strain-tag{
+  font-size:4rem;
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  color:white;
+}
+
+.strain-meta{
+  color:var(--muted);
+  line-height:2;
+}
+
+/* ========================= */
+/* CONFIGURATOR */
+/* ========================= */
+
+.configurator{
+  max-width:800px;
+}
+
+.range-wrap{
+  margin:40px 0;
+}
+
+input[type="range"]{
+  width:100%;
+  accent-color:var(--red);
+}
+
+.mission-output{
+  margin-top:30px;
+  background:rgba(0,0,0,0.2);
+  border-radius:22px;
+  padding:30px;
+  line-height:2;
+}
+
+.mission-output strong{
+  color:var(--bronze);
+}
+
+/* ========================= */
+/* AUTHENTIC KENYA */
+/* ========================= */
+
+.ledger{
+  position:relative;
+  overflow:hidden;
+}
+
+.protocol-badge{
+  display:inline-block;
+  background:rgba(255,59,63,0.12);
+  color:var(--red);
+  padding:10px 18px;
+  border-radius:100px;
+  margin-bottom:25px;
+  border:1px solid rgba(255,59,63,0.25);
+}
+
+.ledger-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.ledger-item{
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.ledger-item small{
+  color:var(--muted);
+  display:block;
+  margin-bottom:12px;
+}
+
+.ledger-item h3{
+  color:white;
+}
+
+/* ========================= */
+/* DROP */
+/* ========================= */
+
+.drop-card{
+  position:relative;
+}
+
+.drop-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.live{
+  color:var(--red);
+}
+
+.progress{
+  width:100%;
+  height:18px;
+  border-radius:100px;
+  background:rgba(255,255,255,0.08);
+  overflow:hidden;
+}
+
+.progress-bar{
+  width:40%;
+  height:100%;
+  background:var(--red);
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{opacity:0.8;}
+  50%{opacity:1;}
+  100%{opacity:0.8;}
+}
+
+.drop-bottom{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+  color:var(--muted);
+}
+
+.drop-btn{
+  width:100%;
+  margin-top:35px;
+  padding:20px;
+  border:none;
+  border-radius:18px;
+  background:var(--red);
+  color:white;
+  font-weight:700;
+  letter-spacing:2px;
+  cursor:pointer;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+  padding:100px 8%;
+  background:
+  linear-gradient(
+    to bottom,
+    var(--green-dark),
+    #0a3b16
+  );
+}
+
+.manifesto{
+  max-width:750px;
+  margin-bottom:60px;
+}
+
+.manifesto h2{
+  font-size:clamp(2rem,4vw,4rem);
+  margin-bottom:25px;
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+}
+
+.manifesto p{
+  line-height:2;
+  color:var(--muted);
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-links div{
+  padding:14px 20px;
+  border-radius:100px;
+  background:rgba(255,255,255,0.06);
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+
+  section{
+    padding:90px 7%;
+  }
+
+  .hero h1{
+    font-size:4.5rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    nJERuIne <span>GOLD</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="#">Strains</a>
+    <a href="#">Configurator</a>
+    <a href="#">Ledger</a>
+    <a href="#">Drops</a>
+  </div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero">
+
+  <video autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-road-in-the-mountains-1565298515154?download=1080p" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="kicker">
+      MAUA → NAIROBI TECH CORRIDOR
+    </div>
+
+    <h1>
+      A CUT <br>
+      <span>ABOVE</span>
+    </h1>
+
+    <p class="hero-sub">
+      <strong>Miraa. Reengineered for performance.</strong><br>
+      Executive-grade stimulant systems engineered in Maua for focus, cognition, social energy, and all-night execution.
+    </p>
+
+    <button class="hero-btn">
+      INITIALIZE DROP
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- INTELLIGENCE LAB -->
+<!-- ========================= -->
+
+<section>
+
+  <div class="section-kicker">
+    EDUCATIONAL ZONE
+  </div>
+
+  <h2 class="section-title">
+    STRAIN INTELLIGENCE LAB
+  </h2>
+
+  <p class="section-sub">
+    Intentional consumption. Cognitive profiles. Hydration pairings. Learn why different strains behave differently and how to use miraa with precision.
+  </p>
+
+  <div class="lab-grid">
+
+    <div class="glass lab-card">
+
+      <div class="lab-label">
+        FOCUS PROFILE
+      </div>
+
+      <h3>GIZA</h3>
+
+      <p>
+        High-focus cultivar optimized for coding sprints, overnight debugging, and long-form concentration sessions.
+      </p>
+
+    </div>
+
+    <div class="glass lab-card">
+
+      <div class="lab-label">
+        SOCIAL PROFILE
+      </div>
+
+      <h3>KANGETA GOLD</h3>
+
+      <p>
+        Balanced energy system engineered for networking, brainstorming sessions, storytelling, and collaborative environments.
+      </p>
+
+    </div>
+
+    <div class="glass lab-card">
+
+      <div class="lab-label">
+        WHY MIRAA?
+      </div>
+
+      <h3>PLANT > SYNTHETIC</h3>
+
+      <p>
+        Traditional stimulant culture rebuilt through botanical intelligence, intentional protocols, and cleaner energy management.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- STRAIN OF THE DAY -->
+
+  <div class="glass strain-day">
+
+    <div>
+      <div class="section-kicker">
+        STRAIN OF THE DAY
+      </div>
+
+      <div class="strain-tag">
+        GIZA NIGHT
+      </div>
+    </div>
+
+    <div class="strain-meta">
+      OPTIMIZED FOR → Deep Focus <br>
+      BEST WINDOW → 7PM - 2AM <br>
+      PAIRING → Magnesium + Citrus
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONFIGURATOR -->
+<!-- ========================= -->
+
+<section>
+
+  <div class="section-kicker">
+    PERFORMANCE SYSTEM
+  </div>
+
+  <h2 class="section-title">
+    MISSION CONFIGURATOR
+  </h2>
+
+  <p class="section-sub">
+    Configure your awake window. Receive a recommended strain and package allocation.
+  </p>
+
+  <div class="glass configurator">
+
+    <label>
+      HOW MANY HOURS DO YOU NEED TO STAY SHARP?
+    </label>
+
+    <div class="range-wrap">
+      <input type="range" min="2" max="14" value="5" id="range">
+    </div>
+
+    <div class="mission-output" id="output"></div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- AUTHENTIC KENYA -->
+<!-- ========================= -->
+
+<section>
+
+  <div class="section-kicker">
+    VERIFICATION LAYER
+  </div>
+
+  <h2 class="section-title">
+    AUTHENTIC KENYA
+  </h2>
+
+  <p class="section-sub">
+    A provenance verification protocol currently under engineering. Designed to eliminate counterfeit distribution and restore trust to the corridor.
+  </p>
+
+  <div class="glass ledger">
+
+    <div class="protocol-badge">
+      PROTOCOL UNDERWAY
+    </div>
+
+    <div class="ledger-grid">
+
+      <div class="ledger-item">
+        <small>HARVEST ELEVATION</small>
+        <h3>2,100m</h3>
+      </div>
+
+      <div class="ledger-item">
+        <small>THERMAL STABILITY</small>
+        <h3>14°C</h3>
+      </div>
+
+      <div class="ledger-item">
+        <small>SEALED AT</small>
+        <h3>05:42 AM</h3>
+      </div>
+
+      <div class="ledger-item">
+        <small>COORDINATES</small>
+        <h3>0.236° N, 37.940° E</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- DROP -->
+<!-- ========================= -->
+
+<section>
+
+  <div class="section-kicker">
+    LIVE RELEASE
+  </div>
+
+  <h2 class="section-title">
+    DROP 001
+  </h2>
+
+  <p class="section-sub">
+    Limited corridor allocation currently active.
+  </p>
+
+  <div class="glass drop-card">
+
+    <div class="drop-top">
+      <span>8 / 20 LEFT</span>
+      <span class="live">LIVE</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div class="drop-bottom">
+      <span>EXECUTIVE TRAY EDITION</span>
+      <span>Nairobi Delivery</span>
+    </div>
+
+    <button class="drop-btn">
+      INITIALIZE PRE-ORDER
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+  <div class="manifesto">
+
+    <h2>
+      MAUA. REENGINEERED.
+    </h2>
+
+    <p>
+      nJERuIne exists to rebuild the miraa corridor through software, logistics intelligence, cultural design, and executive-grade systems thinking.
+    </p>
+
+  </div>
+
+  <div class="footer-links">
+    <div>LINKEDIN</div>
+    <div>TIKTOK</div>
+    <div>EMEN TECH VERIFIED</div>
+  </div>
+
+</footer>
+
+<script>
+
+const range = document.getElementById("range");
+const output = document.getElementById("output");
+
+function updateMission(){
+
+  const hrs = parseInt(range.value);
+
+  let strain = "";
+  let pack = "";
+  let pairing = "";
+
+  if(hrs <= 5){
+
+    strain = "KANGETA GOLD";
+    pack = "250G SOCIAL PACK";
+    pairing = "Green Tea + Hydration";
+
+  }
+
+  else if(hrs <= 9){
+
+    strain = "GIZA";
+    pack = "500G EXECUTIVE PACK";
+    pairing = "Magnesium + Citrus";
+
+  }
+
+  else{
+
+    strain = "GIZA NIGHT";
+    pack = "PREMIUM NIGHT SPRINT";
+    pairing = "Electrolytes + Green Tea";
+
+  }
+
+  output.innerHTML = `
+  
+    <strong>AWAKE WINDOW:</strong> ${hrs} HOURS <br>
+
+    <strong>RECOMMENDED STRAIN:</strong> ${strain} <br>
+
+    <strong>PACKAGE:</strong> ${pack} <br>
+
+    <strong>WELLNESS PAIRING:</strong> ${pairing}
+
+  `;
+
+}
+
+updateMission();
+
+range.addEventListener("input", updateMission);
+
+</script>
+
+</body>
+</html>
